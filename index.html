@@ -1271,5 +1271,24 @@
    <div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://ikkbfngojljohpekonpldkamedehakni/imgs/map/tip-arrow-bottom.png&quot;);"></div>
    <div id="tip-arrow-top" style="background: url(&quot;chrome-extension://ikkbfngojljohpekonpldkamedehakni/imgs/map/tip-arrow-top.png&quot;);"></div>
   </div>
+  <script>
+   // 等待页面元素加载完成（可选但推荐，防止找不到元素）
+   window.addEventListener('DOMContentLoaded', function() {
+     // 找到红色圆形区域的容器（根据实际 ID 调整，这里用之前的 piechart-foxnews 举例）
+     const pieChart = document.getElementById('piechart-foxnews');
+     
+     // 确保元素存在再绑定事件
+     if (pieChart) {
+       pieChart.addEventListener('click', function() {
+         // 替换为你部署在 images 里的 PPT 实际路径
+         // 比如 PPT 是 online_ppt.pdf，放在 images 文件夹，路径就是 'images/online_ppt.pdf'
+         const pptUrl = 'images/(已瘦身)17 EcoTruth——基于LLM与GraphRAG的ESG“漂绿”识别平台(图片版）.pdf'; 
+         
+         // 在新窗口打开链接
+         window.open(pptUrl, '_blank');
+       });
+     }
+   });
+ </script>
  </body>
 </html>
